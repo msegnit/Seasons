@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-    return <div>Hi There!</div>;
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => console.log(position),
+        (err) => console.log(err)
+    );
 
+    return <div>Hi There!</div>;
 };
 
 ReactDOM.render(
